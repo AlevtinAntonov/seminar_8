@@ -1,11 +1,11 @@
-import os.path
-from os.path import exists, isfile
+import os
 from logger import LOG
 from variables import *
 from csv import reader
 from prettytable import PrettyTable
 
 table_students = []
+
 
 @LOG
 def check_exists_id():
@@ -24,8 +24,6 @@ def check_exists_id():
             id_number = 1
     else:
         id_number = 1
-
-
 
 
 @LOG
@@ -71,7 +69,6 @@ def read_file(file_name='student.csv'):
     global list_of_rows
     with open(file_name, 'r', encoding='UTF-8') as file:
         list_of_rows = list(reader(file, delimiter=';'))
-
 
 
 @LOG
